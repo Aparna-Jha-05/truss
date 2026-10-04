@@ -1,0 +1,24 @@
+# Render Blueprint (repo root). New > Blueprint, point at this repo; Render finds
+# this file automatically. Docker build uses backend/Dockerfile with the backend/
+# directory as the build context. Set AIPIPE_TOKEN as a secret when prompted.
+services:
+  - type: web
+    name: invoice-intelligence-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: AIPIPE_TOKEN
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: AIPIPE_VISION_MODEL
+        value: openai/gpt-4o-mini
+      - key: AIPIPE_ESCALATION_MODEL
+        value: openai/gpt-4o
+      - key: CHROMA_DIR
+        value: /app/chroma_store
+      - key: INVOICES_DB
+        value: /app/invoices.db
