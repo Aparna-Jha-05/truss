@@ -4,9 +4,7 @@
 can present it, and answer anything a mentor or judge throws at you, without
 needing to open the code.*
 
-**Live app:** https://verdict-three-ashen.vercel.app
-**Code:** https://github.com/Aparna-Jha-05/verdict
-**API docs:** https://invoice-intelligence-api-yhax.onrender.com/docs
+
 
 ---
 
