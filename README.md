@@ -1,6 +1,6 @@
-# Invoice Intelligence Pipeline
+# Document Intelligence Pipeline
 
-Vision-first invoice extraction wrapped in **two deterministic verification
+Vision-first document extraction wrapped in **two deterministic verification
 layers** and a **human approval gate**. A user drops in a PDF, scan, or phone
 photo; a vision-language model reads it directly (no OCR) into structured JSON
 with per-field confidence and bounding boxes; then two layers that **never call
